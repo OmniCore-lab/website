@@ -12,6 +12,7 @@ This file is a plain-text summary for language models and AI agents. Crawling, i
 - Location: Taoyuan, Taiwan
 - Phone: +886 971 809 510
 - Email: contact@omnicore-lab.dev
+- GitHub: https://github.com/OmniCore-lab
 - Languages: English and Traditional Chinese (zh-Hant)
 
 ## What PalmCore is
