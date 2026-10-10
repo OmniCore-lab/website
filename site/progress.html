@@ -26,9 +26,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&amp;family=Noto+Sans+TC:wght@400;500;700&amp;display=swap">
-<link rel="stylesheet" href="assets/site.css?v=1010e">
-<link rel="stylesheet" href="assets/app-theme.css?v=1010e">
-<script src="assets/site.js?v=1010e" defer></script>
+<link rel="stylesheet" href="assets/site.css?v=1010f">
+<link rel="stylesheet" href="assets/app-theme.css?v=1010f">
+<script src="assets/site.js?v=1010f" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to main content</a>
@@ -55,7 +55,7 @@
     <div class="wrap">
       <p class="label">Progress</p>
       <h1>What we have built, by date</h1>
-      <p class="lead">Taken from our own commit history. Short, dated, and including what is not done.</p>
+      <p class="lead">The main features are built and running on real phones. We are now tuning them. This page is taken from our own commit history.</p>
     </div>
   </section>
 
@@ -63,7 +63,7 @@
     <div class="wrap split">
       <p class="label">Log</p>
       <div data-reveal>
-        <h2 id="h-log" class="gap-l">Since the working build began</h2>
+        <h2 id="h-log" class="gap-l">The road so far</h2>
         <ol class="log">
           <li><time>10 Oct 2026</time><div><h3>Masking model retrained on real screens</h3><p>Retrained the on-device model that masks personal information, this time with real phone screens and paired counter-examples in the training data. On held-out real screens it now catches 99.3% of personal details, up from 92.8%, with fewer than half the false masks. This website and our GitHub organization went public the same day.</p></div></li>
           <li><time>9 Oct 2026</time><div><h3>First full lint pass</h3><p>Ran the static checks over the whole app for the first time. 28 errors found and fixed. Moved file and database work off the main thread in search and the folder view.</p></div></li>
@@ -74,7 +74,9 @@
           <li><time>1 Oct 2026</time><div><h3>Interface rebuilt around the character</h3><p>The character became the home screen, with the conversation in a glass panel beneath it. Speech recognition and speech output can each run on the phone or in the cloud.</p></div></li>
           <li><time>30 Sep 2026</time><div><h3>It can operate the phone for you</h3><p>PalmCore reads the screen and carries out a task one step at a time, saying what it is pressing. Anything that can't be undone needs a yes first.</p></div></li>
           <li><time>28 Sep 2026</time><div><h3>Privacy on the phone</h3><p>On-device masking for text and for photos such as medicine bags. A background guard that notices suspicious messages.</p></div></li>
-          <li><time>23 Sep 2026</time><div><h3>The working build begins</h3><p>An earlier prototype showed the idea. This is the build meant to really work on a phone, under version control from this day.</p></div></li>
+          <li><time>23 Sep 2026</time><div><h3>Second version begins</h3><p>The first version proved the idea. We started over on the parts that needed it, aiming at something that holds up in daily use.</p></div></li>
+          <li><time>14 Sep 2026</time><div><h3>First version and film finished</h3><p>A complete first version of the app, the 3D character, and a two-minute film showing it in use.</p></div></li>
+          <li><time>Late Aug 2026</time><div><h3>Work begins</h3><p>First designs and the first code.</p></div></li>
         </ol>
         <p class="fine">Part of the source is public at <a href="https://github.com/OmniCore-lab" rel="noopener">github.com/OmniCore-lab</a>.</p>
       </div>
@@ -83,14 +85,14 @@
 
   <section class="section" aria-labelledby="h-notyet">
     <div class="wrap split">
-      <p class="label">Not done</p>
+      <p class="label">What's left</p>
       <div data-reveal>
-        <h2 id="h-notyet" class="gap-m">What we have not done yet</h2>
+        <h2 id="h-notyet" class="gap-m">What is left before release</h2>
         <ul class="plain">
-          <li><strong>On-device check of the new masking model</strong><span>The numbers above come from running the phone's model and rules on a computer. A run on the phone itself is next.</span></li>
-          <li><strong>Family app on iPhone</strong><span>Written, not yet compiled or tested on a device.</span></li>
-          <li><strong>Outside verification</strong><span>Nobody outside the team has checked our measurements.</span></li>
-          <li><strong>Public release</strong><span>No date yet.</span></li>
+          <li><strong>Tuning</strong><span>Accuracy of the masking model on the phone itself, speed on older phones, and the small things that only show up in daily use.</span></li>
+          <li><strong>Family app on iPhone</strong><span>Written. Still to be compiled and tested on a device. The Android family app works.</span></li>
+          <li><strong>Outside verification</strong><span>Our measurements are our own. We want someone outside the team to check them.</span></li>
+          <li><strong>Public release</strong><span>After tuning. No date yet.</span></li>
         </ul>
       </div>
     </div>

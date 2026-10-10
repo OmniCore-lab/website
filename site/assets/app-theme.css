@@ -274,3 +274,9 @@ address { font-style: normal; }
 
 /* 介紹影片 */
 .film { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; border-radius: 20px; background: #1B2733; box-shadow: 0 26px 60px -28px rgba(37, 60, 66, .6); margin-bottom: 1rem; }
+
+/* 規模：四格 */
+.size-h { margin-top: 2.25rem; }
+.stats.size { margin-top: .75rem; }
+@media (min-width: 700px) { .stats.size { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.stats.size > div { background: rgba(255, 255, 255, .5); }

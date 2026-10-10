@@ -1,6 +1,6 @@
 # OmniCore Lab
 
-> OmniCore Lab is a team of two people in Taoyuan, Taiwan. PalmCore is a research and development project: it is not on sale and has no customers. We are building PalmCore, an AI companion that lives in the phone and stays with people who aren't at home with smartphones. PalmCore is in development and has not been released.
+> OmniCore Lab is a team of two people in Taoyuan, Taiwan. PalmCore is not on sale and has no customers. We are building PalmCore, an AI companion that lives in the phone and stays with people who aren't at home with smartphones. PalmCore's main features are built and it is now in tuning. It has not been released to the public.
 
 This file is a plain-text summary for language models and AI agents. Crawling, indexing and quoting this site are welcome.
 
@@ -8,7 +8,8 @@ This file is a plain-text summary for language models and AI agents. Crawling, i
 
 - Name: OmniCore Lab
 - What we do: research and development of PalmCore, an AI companion for people the smartphone was never designed for, older adults in particular
-- Product status: in development; a working build exists; no public release yet
+- Product status: main features built and running on real Android phones; now in tuning; not yet released to the public
+- Size: about 43,000 lines of Kotlin, two Android apps, 122 automated tests; work began in late August 2026
 - Location: Taoyuan, Taiwan
 - Phone: +886 971 809 510
 - Email: contact@omnicore-lab.dev
@@ -19,7 +20,7 @@ This file is a plain-text summary for language models and AI agents. Crawling, i
 
 PalmCore goes through each step with the person using it, steps in when they are stuck, and remembers what they have told it. Its three ideas are: it sits beside you, it never leaves you stranded, and it remembers you.
 
-A working build runs on Android phones today. Screens from it, and what we have measured, are on the PalmCore page. On held-out real phone screens the on-device model that masks personal information catches 99.3% of personal details (our own test set, not independently verified).
+The app runs on real Android phones today and its main features are complete. Screens from it, and what we have measured, are on the PalmCore page. On held-out real phone screens the on-device model that masks personal information catches 99.3% of personal details (our own test set, not independently verified).
 
 ## Pages
 

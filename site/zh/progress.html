@@ -26,9 +26,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&amp;family=Noto+Sans+TC:wght@400;500;700&amp;display=swap">
-<link rel="stylesheet" href="../assets/site.css?v=1010e">
-<link rel="stylesheet" href="../assets/app-theme.css?v=1010e">
-<script src="../assets/site.js?v=1010e" defer></script>
+<link rel="stylesheet" href="../assets/site.css?v=1010f">
+<link rel="stylesheet" href="../assets/app-theme.css?v=1010f">
+<script src="../assets/site.js?v=1010f" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">跳到主要內容</a>
@@ -55,7 +55,7 @@
     <div class="wrap">
       <p class="label">進度</p>
       <h1>我們做了什麼，按日期</h1>
-      <p class="lead">從我們自己的版本紀錄整理出來。寫得短、有日期，沒做完的也列出來。</p>
+      <p class="lead">主要功能都做完了，也在真的手機上跑，現在在調校。這一頁是從我們自己的版本紀錄整理出來的。</p>
     </div>
   </section>
 
@@ -63,7 +63,7 @@
     <div class="wrap split">
       <p class="label">紀錄</p>
       <div data-reveal>
-        <h2 id="h-log" class="gap-l">從能用的這一版開始</h2>
+        <h2 id="h-log" class="gap-l">一路做到現在</h2>
         <ol class="log">
           <li><time>2026/10/10</time><div><h3>遮罩模型用真畫面重新訓練</h3><p>把手機上遮個人資料的模型重新訓練，這次訓練資料裡有真的手機畫面，也有成對的反例。在沒看過的真畫面上，個資抓到的比例從 92.8% 到 99.3%，誤遮少了一半以上。這個網站和 GitHub 組織也在同一天公開。</p></div></li>
           <li><time>2026/10/09</time><div><h3>第一次完整的靜態檢查</h3><p>整個 App 第一次全部跑過靜態檢查，找到並修掉 28 個錯誤。搜尋與資料夾畫面的檔案、資料庫讀寫移出主執行緒。</p></div></li>
@@ -74,7 +74,9 @@
           <li><time>2026/10/01</time><div><h3>介面以角色為中心重做</h3><p>角色變成首頁，對話在牠下方的霧玻璃面板裡。語音辨識與語音輸出都可以選在手機上跑或用雲端。</p></div></li>
           <li><time>2026/09/30</time><div><h3>可以替你操作手機</h3><p>PalmCore 讀畫面、一步一步把事情做完，按哪裡都會說出來。收不回來的事要先得到同意。</p></div></li>
           <li><time>2026/09/28</time><div><h3>隱私留在手機上</h3><p>文字與照片（例如藥袋）的個資遮罩在手機上完成。背景守護會留意可疑的訊息。</p></div></li>
-          <li><time>2026/09/23</time><div><h3>開始做能用的這一版</h3><p>更早的原型只是把想法做出來看。這一版是要真的能在手機上用的，從這一天起進版本控制。</p></div></li>
+          <li><time>2026/09/23</time><div><h3>開始做第二版</h3><p>第一版證明這個想法做得出來。需要重來的部分我們重新做，目標是每天用也撐得住。</p></div></li>
+          <li><time>2026/09/14</time><div><h3>第一版與影片完成</h3><p>完整的第一版 App、3D 角色，以及一支兩分鐘、實際操作的影片。</p></div></li>
+          <li><time>2026/08 底</time><div><h3>開始做</h3><p>最早的設計與第一行程式。</p></div></li>
         </ol>
         <p class="fine">部分原始碼公開在 <a href="https://github.com/OmniCore-lab" rel="noopener">github.com/OmniCore-lab</a>。</p>
       </div>
@@ -83,14 +85,14 @@
 
   <section class="section" aria-labelledby="h-notyet">
     <div class="wrap split">
-      <p class="label">還沒做</p>
+      <p class="label">剩下的</p>
       <div data-reveal>
-        <h2 id="h-notyet" class="gap-m">還沒做到的事</h2>
+        <h2 id="h-notyet" class="gap-m">上架前還剩什麼</h2>
         <ul class="plain">
-          <li><strong>新的遮罩模型在手機上重跑</strong><span>上面的數字是把手機的模型和規則拿到電腦上跑出來的，接下來要在手機上再跑一次。</span></li>
-          <li><strong>iPhone 的家人端</strong><span>寫好了，還沒編譯、也沒在實機上測過。</span></li>
-          <li><strong>外部驗證</strong><span>我們量的數字，還沒有團隊以外的人檢查過。</span></li>
-          <li><strong>公開上架</strong><span>還沒有日期。</span></li>
+          <li><strong>調校</strong><span>遮罩模型在手機上的實際準確度、舊手機上的速度，還有每天用才會出現的小問題。</span></li>
+          <li><strong>iPhone 的家人端</strong><span>寫好了，還要編譯並在實機上測。Android 的家人端已經能用。</span></li>
+          <li><strong>外部驗證</strong><span>數字是我們自己量的，希望有團隊以外的人來檢查。</span></li>
+          <li><strong>公開上架</strong><span>調校完之後。還沒有日期。</span></li>
         </ul>
       </div>
     </div>

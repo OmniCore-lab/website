@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>PalmCore｜住在手機裡的 AI 夥伴｜OmniCore Lab</title>
-<meta name="description" content="PalmCore 是為不熟悉智慧型手機的人做的 AI 夥伴：陪你一步一步做、卡住時有人接手、記得你說過的事。目前在研發階段，尚未公開上架。">
+<meta name="description" content="PalmCore 是為不熟悉智慧型手機的人做的 AI 夥伴：陪你一步一步做、卡住時有人接手、記得你說過的事。主要功能已完成、在真的手機上跑，目前調校中，尚未公開上架。">
 <link rel="canonical" href="https://omnicore-lab.dev/zh/palmcore">
 <link rel="alternate" hreflang="zh-Hant" href="https://omnicore-lab.dev/zh/palmcore">
 <link rel="alternate" hreflang="en" href="https://omnicore-lab.dev/palmcore">
@@ -12,7 +12,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="OmniCore Lab">
 <meta property="og:title" content="PalmCore｜住在手機裡的 AI 夥伴｜OmniCore Lab">
-<meta property="og:description" content="PalmCore 是為不熟悉智慧型手機的人做的 AI 夥伴：陪你一步一步做、卡住時有人接手、記得你說過的事。目前在研發階段，尚未公開上架。">
+<meta property="og:description" content="PalmCore 是為不熟悉智慧型手機的人做的 AI 夥伴：陪你一步一步做、卡住時有人接手、記得你說過的事。主要功能已完成、在真的手機上跑，目前調校中，尚未公開上架。">
 <meta property="og:url" content="https://omnicore-lab.dev/zh/palmcore">
 <meta property="og:image" content="https://omnicore-lab.dev/assets/og.png">
 <meta property="og:image:width" content="1200">
@@ -26,9 +26,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&amp;family=Noto+Sans+TC:wght@400;500;700&amp;display=swap">
-<link rel="stylesheet" href="../assets/site.css?v=1010e">
-<link rel="stylesheet" href="../assets/app-theme.css?v=1010e">
-<script src="../assets/site.js?v=1010e" defer></script>
+<link rel="stylesheet" href="../assets/site.css?v=1010f">
+<link rel="stylesheet" href="../assets/app-theme.css?v=1010f">
+<script src="../assets/site.js?v=1010f" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">跳到主要內容</a>
@@ -53,7 +53,7 @@
 <main id="main">
   <section class="page-head">
     <div class="wrap">
-      <p class="label">產品　研發中</p>
+      <p class="label">產品　已完成・調校中</p>
       <h1>PalmCore</h1>
       <p class="lead">住在手機裡的 AI 夥伴，為不熟悉智慧型手機的人而做。</p>
     </div>
@@ -67,7 +67,7 @@
         <video class="film" controls preload="none" playsinline poster="../assets/film/poster.jpg" width="1280" height="720" aria-label="PalmCore 介紹影片，國語旁白。">
           <source src="../assets/film/palmcore-intro.mp4" type="video/mp4">
         </video>
-        <p class="fine">2026 年 9 月為了介紹這個想法拍的，用的是第一版原型。往下的畫面是目前這一版。</p>
+        <p class="fine">2026 年 9 月用第一版拍的。之後 App 重做過一輪，往下的畫面是現在這一版。</p>
       </div>
     </div>
   </section>
@@ -77,7 +77,7 @@
       <p class="label">現在有什麼</p>
       <div data-reveal>
         <h2 id="h-today" class="gap-m">它現在就在手機上跑</h2>
-        <p class="gap-l">下面是目前這一版在 Android 手機上的實際畫面，不是示意圖。</p>
+        <p class="gap-l">下面是目前這一版在 Android 手機上的實際畫面，不是示意圖。下面列的每一項現在都能用。</p>
         <div class="phones">
           <figure class="phone"><img src="../assets/shots/home.webp" width="540" height="1200" loading="lazy" decoding="async" alt="PalmCore 首頁：角色在畫面中央，下方是一則提醒建議"><figcaption>首頁。角色本身就是首頁，用說的或打字都可以。</figcaption></figure>
           <figure class="phone"><img src="../assets/shots/steps.webp" width="540" height="1200" loading="lazy" decoding="async" alt="對話裡把走路路線拆成編號步驟"><figcaption>路線拆成一步一步，一次只講一件事。</figcaption></figure>
@@ -93,6 +93,14 @@
           <li>記得你說過的事，存在手機上</li>
           <li>文字送到雲端模型之前，先在手機上把個人資料遮起來</li>
         </ul>
+        <h3 class="built-h size-h">有多少東西</h3>
+        <dl class="stats size">
+          <div><dt>43,000</dt><dd><strong>行 Kotlin</strong><span>主 App 194 個原始檔，加上家人端 App</span></dd></div>
+          <div><dt>2</dt><dd><strong>個 Android App</strong><span>本人用一個、家人用一個；iPhone 的家人端已寫好</span></dd></div>
+          <div><dt>122</dt><dd><strong>個自動測試</strong><span>規則、斷詞、出站攔截的單元測試</span></dd></div>
+          <div><dt>30</dt><dd><strong>個角色動作</strong><span>另有給跑不動 3D 的手機用的平面版</span></dd></div>
+        </dl>
+        <p class="fine">2026 年 10 月 10 日從程式庫數出來的。2026 年 8 月底開始做。</p>
       </div>
     </div>
   </section>
@@ -193,10 +201,10 @@
     <div class="wrap split">
       <p class="label">目前階段</p>
       <div class="prose" data-reveal>
-        <p class="status">研發中</p>
-        <h2 id="h-stage">還在做，尚未公開上架</h2>
-        <p>PalmCore 現在沒有可以下載的版本，也沒有候補名單。這個階段我們不公開產品畫面與技術細節；等到能負責任地講清楚，會更新在這一頁。</p>
-        <p>想進一步了解或談合作，請<a href="contact.html">寫信給我們</a>。</p>
+        <p class="status">主要功能已完成・調校中</p>
+        <h2 id="h-stage">已經做完，調校中，尚未公開上架</h2>
+        <p>主要功能都做完了，也在真的手機上跑。我們現在做的是調校。目前還沒有公開下載的版本。我們有一份按日期寫的<a href="progress.html">進度紀錄</a>，部分成果放在 <a href="https://github.com/OmniCore-lab" rel="noopener">GitHub</a>。</p>
+        <p>想在開放試用時試試看？<a href="mailto:contact@omnicore-lab.dev?subject=%E9%96%8B%E6%94%BE%E8%A9%A6%E7%94%A8%E6%99%82%E9%80%9A%E7%9F%A5%E6%88%91">寫信給我們</a>，到時候我們會回信。</p>
       </div>
     </div>
   </section>
