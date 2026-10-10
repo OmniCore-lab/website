@@ -213,3 +213,16 @@ address { font-style: normal; }
 .facts dt { color: var(--muted); font-size: .9375rem; }
 .facts dd { margin: 0; }
 .foot address { margin-top: .35rem; font-size: .9375rem; max-width: 28em; }
+
+/* GitHub：跟主要按鈕同一級（墨藍實心），頁首每一頁都有一顆 */
+.btn-gh, .nav a.gh {
+  display: inline-flex; align-items: center; gap: .55rem;
+  background: #253C42; color: #F7F3EA; border-radius: 999px; font-weight: 600; text-decoration: none;
+  box-shadow: 0 10px 30px -12px rgba(37, 60, 66, .55);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.btn-gh svg, .nav a.gh svg { width: 1.15em; height: 1.15em; flex: none; }
+.btn-gh:hover, .nav a.gh:hover { transform: translateY(-1px); box-shadow: 0 14px 34px -12px rgba(37, 60, 66, .7); opacity: 1; }
+.nav a.gh { padding: .42rem .95rem; font-size: .875rem; background-image: none; opacity: 1; color: #F7F3EA; }
+.actions { gap: .75rem 1rem; }
+.actions .more { margin-left: .5rem; }
