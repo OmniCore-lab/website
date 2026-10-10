@@ -1,6 +1,6 @@
 # OmniCore Lab
 
-> OmniCore Lab is a small R&D team in Taoyuan, Taiwan. We are building PalmCore, an AI companion that lives in the phone and stays with people who aren't at home with smartphones. PalmCore is in development and has not been released.
+> OmniCore Lab is a team of two people in Taoyuan, Taiwan. PalmCore is a research and development project: it is not on sale and has no customers. We are building PalmCore, an AI companion that lives in the phone and stays with people who aren't at home with smartphones. PalmCore is in development and has not been released.
 
 This file is a plain-text summary for language models and AI agents. Crawling, indexing and quoting this site are welcome.
 

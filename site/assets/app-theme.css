@@ -271,3 +271,6 @@ address { font-style: normal; }
 }
 .moves button:hover { transform: translateY(-1px); }
 .moves button:active { transform: scale(.96); }
+
+/* 介紹影片 */
+.film { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; border-radius: 20px; background: #1B2733; box-shadow: 0 26px 60px -28px rgba(37, 60, 66, .6); margin-bottom: 1rem; }
