@@ -1,0 +1,215 @@
+/* OmniCore Lab — App 風格（2026-10-10）
+   整站改成跟 PalmCore 手機介面同一套語彙：霧青的天、慢慢飄的光、霧玻璃的面板、暖金點綴、圓角與膠囊。
+   這一份在 site.css 之後載入，只蓋顏色、字體與外觀；版面結構仍在 site.css。
+   顏色取自 App 的亮色配色 LightPalm（skyTop #E7EFEA／skyBottom #D3DFD8、光團 #AFC8E8／#C9DDD3／#F0D9AE／#BFD7E0）。 */
+
+:root {
+  color-scheme: light;
+  --bg: #D3DFD8;
+  --sky-top: #E7EFEA;
+  --surface: rgba(235, 239, 229, .6);
+  --text: #253C42;
+  --muted: #4D6668;
+  --line: rgba(37, 60, 66, .13);
+  --link: #805E22;
+  --mark: #3A5A8C;
+  --mark-soft: rgba(58, 90, 140, .12);
+  --sand: #805E22;
+  --gold: #C7A982;
+  --btn-bg: #805E22;
+  --btn-text: #FFFFFF;
+  --band-bg: transparent;
+  --band-text: var(--text);
+  --band-muted: var(--muted);
+  --band-link: var(--link);
+  --band-line: var(--line);
+  --focus: #805E22;
+  --glass: rgba(255, 255, 255, .55);
+  --glass-strong: rgba(247, 250, 246, .85);
+  --edge-hi: rgba(255, 255, 255, .8);
+  --edge-lo: rgba(37, 60, 66, .08);
+  --radius: 28px;
+  --serif: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;   /* 標題也用無襯線，跟 App 一致 */
+  --sans: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+:root:lang(en) {
+  --sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --serif: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+/* ── 天空與光 ── */
+/* 底色放在 html，光團（body 的兩個偽元素，z-index -1）才會落在底色上面、內容下面 */
+html { background: linear-gradient(180deg, var(--sky-top) 0%, var(--bg) 60%, #CBD9D1 100%) fixed var(--bg); min-height: 100%; }
+body { background: transparent; min-height: 100vh; }
+body::before, body::after {
+  content: ""; position: fixed; inset: -20vmax; z-index: -1; pointer-events: none;
+  will-change: transform;
+}
+body::before {
+  background:
+    radial-gradient(42vmax 42vmax at 24% 20%, rgba(175, 200, 232, .85), transparent 68%),
+    radial-gradient(38vmax 38vmax at 82% 38%, rgba(201, 221, 211, .80), transparent 70%);
+  animation: drift-a 46s ease-in-out infinite alternate;
+}
+body::after {
+  background:
+    radial-gradient(30vmax 30vmax at 66% 30%, rgba(240, 217, 174, .75), transparent 70%),
+    radial-gradient(44vmax 44vmax at 30% 86%, rgba(191, 215, 224, .85), transparent 70%);
+  animation: drift-b 62s ease-in-out infinite alternate;
+}
+@keyframes drift-a { from { transform: translate3d(-3vmax, -2vmax, 0); } to { transform: translate3d(5vmax, 4vmax, 0); } }
+@keyframes drift-b { from { transform: translate3d(4vmax, 2vmax, 0); } to { transform: translate3d(-5vmax, -3vmax, 0); } }
+
+/* ── 字 ── */
+h1, h2, h3 { font-weight: 700; letter-spacing: .01em; }
+:lang(en) h1, :lang(en) h2, :lang(en) h3 { font-weight: 600; letter-spacing: -.015em; }
+h1 { font-size: clamp(2rem, 1.2rem + 3.2vw, 3.35rem); line-height: 1.22; }
+:lang(en) h1 { line-height: 1.12; }
+.lead { color: var(--text); opacity: .9; }
+a { color: var(--link); text-decoration-color: rgba(128, 94, 34, .38); }
+::selection { background: #E7DFC4; color: #253C42; }
+
+/* 霧玻璃：App 裡每一塊面板的樣子 */
+.glass, .section .prose, .section .split > div:not(.prose), .summary, .doc, .lost .wrap {
+  background: var(--glass);
+  -webkit-backdrop-filter: blur(22px) saturate(1.15); backdrop-filter: blur(22px) saturate(1.15);
+  border-radius: var(--radius);
+  border: 1px solid transparent;
+  background-clip: padding-box;
+  box-shadow: inset 0 1px 0 var(--edge-hi), inset 0 -1px 0 var(--edge-lo), 0 24px 60px -30px rgba(37, 60, 66, .30);
+  padding: clamp(22px, 3.4vw, 40px);
+}
+.section .prose, .doc { max-width: 46rem; }
+.section { border-top: 0; padding-block: clamp(22px, 3.6vw, 44px); }
+.section:first-of-type { padding-top: clamp(28px, 5vw, 64px); }
+
+/* 小標：膠囊（App 頂列那顆「一直聊」的樣子） */
+.label {
+  display: inline-flex; align-items: center; align-self: start; justify-self: start;
+  padding: .32rem .95rem; border-radius: 999px;
+  background: rgba(255, 255, 255, .6);
+  box-shadow: inset 0 1px 0 var(--edge-hi);
+  color: var(--muted); font-size: .8125rem; letter-spacing: .06em;
+}
+.label::before { content: ""; width: .42rem; height: .42rem; border-radius: 50%; background: var(--sand); margin-right: .6rem; opacity: .9; }
+
+/* ── 頁首：浮在上面的玻璃膠囊 ── */
+.site-head { position: sticky; top: 0; z-index: 20; padding-block: .9rem; }
+.head {
+  background: var(--glass-strong);
+  -webkit-backdrop-filter: blur(20px) saturate(1.2); backdrop-filter: blur(20px) saturate(1.2);
+  border-radius: 999px;
+  box-shadow: inset 0 1px 0 var(--edge-hi), 0 14px 40px -24px rgba(37, 60, 66, .35);
+  padding: .55rem 1.25rem .55rem 1.1rem;
+  max-width: min(1080px, calc(100% - 2 * var(--gutter)));
+}
+.brand { font-family: var(--sans); font-weight: 600; letter-spacing: .01em; }
+.brand .ring { stroke: var(--sand); }
+.brand .dot { fill: #1D4279; }
+.nav a, .lang { color: var(--text); opacity: .86; }
+.nav a:hover, .lang:hover { opacity: 1; }
+.nav a[aria-current="page"] { color: var(--sand); opacity: 1; }
+@media (max-width: 599px) {
+  .head { border-radius: 26px; padding: .7rem 1.1rem; }
+  .nav { border-top-color: var(--line); }
+}
+
+/* ── 首頁：智核與話泡 ── */
+.hero { padding-block: clamp(20px, 4vw, 56px) clamp(36px, 6vw, 72px); }
+@media (min-width: 960px) { .hero-grid { grid-template-columns: minmax(0, 1.02fr) minmax(320px, .98fr); } }
+.hero .label { margin-bottom: 1.2rem; }
+.orb-wrap { display: flex; flex-direction: column; align-items: center; justify-self: center; width: 100%; max-width: 520px; }
+.orb-stage { position: relative; width: 100%; aspect-ratio: 1 / 1; }
+.orb-stage::before {    /* 牠身後那團光（App 裡光會跟著牠走） */
+  content: ""; position: absolute; inset: 8%; border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(240, 217, 174, .55), rgba(175, 200, 232, .45) 55%, transparent 72%);
+  filter: blur(18px);
+}
+.orb-stage iframe, .orb-stage .orb-fallback { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; background: transparent; }
+.orb-stage iframe { opacity: 0; transition: opacity .9s ease; }
+.orb-stage.is-live iframe { opacity: 1; }
+.orb-fallback { display: grid; place-items: center; transition: opacity .6s ease; }
+.orb-fallback svg { width: 62%; height: auto; }
+.orb-stage.is-live .orb-fallback { opacity: 0; pointer-events: none; }
+.fig-ring { stroke: var(--sand); opacity: .75; }
+.fig-soft { fill: rgba(29, 66, 121, .28); }
+.fig-dot { fill: #1D4279; }
+/* 話泡：尾巴朝上指著牠 */
+.bubble {
+  position: relative; margin-top: -13%; max-width: 22rem; text-align: center;
+  background: var(--glass-strong);
+  -webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px);
+  border-radius: 26px; padding: .95rem 1.4rem;
+  box-shadow: inset 0 1px 0 var(--edge-hi), 0 20px 50px -26px rgba(37, 60, 66, .35);
+  font-size: 1.0625rem; line-height: 1.6;
+}
+.bubble::before {
+  content: ""; position: absolute; left: 50%; top: -9px; width: 20px; height: 10px; transform: translateX(-50%);
+  background: var(--glass-strong); clip-path: polygon(50% 0, 100% 100%, 0 100%);
+}
+@media (max-width: 959px) {
+  .orb-wrap { order: -1; max-width: 340px; }
+  .hero-fig { max-width: none; }
+}
+
+/* 按鈕：暖沙色的膠囊（App 的麥克風鈕） */
+.btn {
+  background: var(--btn-bg); color: var(--btn-text); border-radius: 999px; font-weight: 600;
+  padding: .8rem 1.5rem; box-shadow: 0 10px 30px -12px rgba(128, 94, 34, .45);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.btn:hover { opacity: 1; transform: translateY(-1px); box-shadow: 0 14px 34px -12px rgba(128, 94, 34, .6); }
+.btn:active { transform: scale(.97); }
+.more { color: var(--text); text-decoration-color: rgba(37, 60, 66, .28); }
+.more::after { color: var(--sand); }
+
+/* 內頁的標題區 */
+.page-head { padding-block: clamp(28px, 5vw, 64px) clamp(20px, 3vw, 36px); border-bottom: 0; }
+
+/* 清單與卡片裡的細節 */
+.trio, .trio div, .points > li, .core, .plain li, .doc h2 { border-color: var(--line); }
+.trio dt, .plain strong { font-family: var(--sans); font-weight: 600; color: var(--text); }
+:lang(en) .trio dt, :lang(en) .plain strong { font-weight: 600; font-size: 1.0625rem; }
+.points > li::before, .core .num { font-family: var(--sans); color: var(--sand); font-weight: 600; }
+.core svg circle[class="fig-ring"] { stroke: var(--sand); }
+.points { max-width: none; }
+
+/* 目前狀態：亮一點的玻璃，旁邊一顆呼吸的點 */
+.band { background: transparent; }
+.band .prose { background: var(--glass-strong); }
+.band .status { color: var(--sand); letter-spacing: .06em; }
+.band .status::before { box-shadow: 0 0 0 0 rgba(128, 94, 34, .4); animation: breathe 2.6s ease-out infinite; }
+@keyframes breathe { 0% { box-shadow: 0 0 0 0 rgba(128, 94, 34, .4); } 100% { box-shadow: 0 0 0 .7rem rgba(128, 94, 34, 0); } }
+
+.email { font-family: var(--sans); font-weight: 600; letter-spacing: -.01em; color: var(--sand); text-decoration: none; }
+.email:hover { text-decoration: underline; }
+.summary { border-left: 0; background: var(--glass-strong); padding: 1.1rem 1.4rem; border-radius: 20px; margin-bottom: 1.5rem; }
+.doc h2 { border-top-color: var(--line); }
+
+/* 頁尾 */
+.site-foot { background: transparent; border-top: 1px solid var(--line); margin-top: clamp(32px, 6vw, 80px); color: var(--muted); }
+.foot a { color: var(--text); }
+
+/* 沒有 backdrop-filter 的瀏覽器：玻璃改成不透明一點 */
+@supports not ((backdrop-filter: blur(2px)) or (-webkit-backdrop-filter: blur(2px))) {
+  .glass, .section .prose, .section .split > div:not(.prose), .summary, .doc, .head, .bubble { background: #F7FAF6; }
+}
+@media (prefers-reduced-motion: reduce) { body::before, body::after { animation: none; } }
+@media print { body { background: #fff; color: #000; } body::before, body::after, .orb-wrap { display: none; } }
+
+/* 右欄的卡片同一個寬度 */
+.section .prose, .section .split > div:not(.prose), .doc { max-width: 52rem; }
+.section .prose > p, .section .prose > h2, .points p, .core p { max-width: 40em; }
+
+/* 亮色：site.css 原本會跟著系統切深色，這裡固定用亮色（跟 App 的日間配色一致） */
+.band .status::before { background: var(--sand); }
+.site-foot .brand .ring, .brand .ring { stroke: #9A6A20; }
+
+/* 聯絡資訊：地址、電話、信箱 */
+address { font-style: normal; }
+.facts { margin: 1.1rem 0 1.3rem; display: grid; gap: 0; }
+.facts > div { display: grid; grid-template-columns: 5.5rem minmax(0, 1fr); gap: 1rem; padding-block: .75rem; border-top: 1px solid var(--line); }
+.facts > div:last-child { border-bottom: 1px solid var(--line); }
+.facts dt { color: var(--muted); font-size: .9375rem; }
+.facts dd { margin: 0; }
+.foot address { margin-top: .35rem; font-size: .9375rem; max-width: 28em; }

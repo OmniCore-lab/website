@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://omnicore-lab.dev/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://omnicore-lab.dev/zh/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://omnicore-lab.dev/"/>
+  </url>
+  <url>
+    <loc>https://omnicore-lab.dev/zh/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://omnicore-lab.dev/zh/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://omnicore-lab.dev/"/>
+  </url>
+  <url>
+    <loc>https://omnicore-lab.dev/palmcore</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://omnicore-lab.dev/zh/palmcore"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://omnicore-lab.dev/palmcore"/>
+  </url>
+  <url>
+    <loc>https://omnicore-lab.dev/zh/palmcore</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://omnicore-lab.dev/zh/palmcore"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://omnicore-lab.dev/palmcore"/>
+  </url>
+  <url>
+    <loc>https://omnicore-lab.dev/about</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://omnicore-lab.dev/zh/about"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://omnicore-lab.dev/about"/>
+  </url>
+  <url>
+    <loc>https://omnicore-lab.dev/zh/about</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://omnicore-lab.dev/zh/about"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://omnicore-lab.dev/about"/>
+  </url>
+  <url>
+    <loc>https://omnicore-lab.dev/contact</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://omnicore-lab.dev/zh/contact"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://omnicore-lab.dev/contact"/>
+  </url>
+  <url>
+    <loc>https://omnicore-lab.dev/zh/contact</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://omnicore-lab.dev/zh/contact"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://omnicore-lab.dev/contact"/>
+  </url>
+  <url>
+    <loc>https://omnicore-lab.dev/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://omnicore-lab.dev/zh/privacy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://omnicore-lab.dev/privacy"/>
+  </url>
+  <url>
+    <loc>https://omnicore-lab.dev/zh/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://omnicore-lab.dev/zh/privacy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://omnicore-lab.dev/privacy"/>
+  </url>
+</urlset>

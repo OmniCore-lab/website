@@ -1,0 +1,37 @@
+# OmniCore Lab
+
+> OmniCore Lab is a small R&D team in Taoyuan, Taiwan. We are building PalmCore, an AI companion that lives in the phone and stays with people who aren't at home with smartphones. PalmCore is in development and has not been released.
+
+This file is a plain-text summary for language models and AI agents. Crawling, indexing and quoting this site are welcome.
+
+## Facts
+
+- Name: OmniCore Lab
+- What we do: research and development of PalmCore, an AI companion for people the smartphone was never designed for, older adults in particular
+- Product status: in development; no public release and no public test places yet
+- Location: Taoyuan, Taiwan
+- Phone: +886 971 809 510
+- Email: contact@omnicore-lab.dev
+- Languages: English and Traditional Chinese (zh-Hant)
+
+## What PalmCore is
+
+PalmCore goes through each step with the person using it, steps in when they are stuck, and remembers what they have told it. Its three ideas are: it sits beside you, it never leaves you stranded, and it remembers you.
+
+Technical details, product visuals and timelines are not public at this stage.
+
+## Pages
+
+- [Home](https://omnicore-lab.dev/): who we are and what we are building
+- [PalmCore](https://omnicore-lab.dev/palmcore): what the product is, and what we decided not to do
+- [About](https://omnicore-lab.dev/about): the problem we care about and how we work
+- [Contact](https://omnicore-lab.dev/contact): phone, email; partnerships and press
+- [Privacy](https://omnicore-lab.dev/privacy): the site uses no cookies, tracking, analytics or forms
+
+## 中文
+
+- [首頁](https://omnicore-lab.dev/zh/)
+- [PalmCore](https://omnicore-lab.dev/zh/palmcore)
+- [關於](https://omnicore-lab.dev/zh/about)
+- [聯絡](https://omnicore-lab.dev/zh/contact)
+- [隱私權政策](https://omnicore-lab.dev/zh/privacy)

@@ -1,0 +1,24 @@
+# Cloudflare Pages 會讀這個檔，替每個回應加上標頭。
+# 這個網站只載入自己的 CSS／JS／SVG，外加 Google Fonts 的樣式表與字型檔。
+# 之後如果加了別的外部資源（例如換字型來源），要回來改 Content-Security-Policy。
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=(), browsing-topics=()
+  Cross-Origin-Opener-Policy: same-origin
+  Content-Security-Policy: default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; manifest-src 'self'; base-uri 'self'; frame-src 'self'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests
+
+/assets/*
+  Cache-Control: public, max-age=3600
+
+# 首頁的 3D 智核（orb/ 底下，放在同網域的 iframe 裡）：
+# - 要能被自己的網站嵌入（frame-ancestors 'self'）
+# - importmap 是行內的，用雜湊放行（改了 embed.html 裡那一行就要重算）
+# - 模型用 Draco 解壓：需要 WebAssembly 與 blob 的 worker
+/orb/*
+  ! Content-Security-Policy
+  Content-Security-Policy: default-src 'none'; script-src 'self' 'sha256-1RkuOKYlCLaXova92cwjAggvNsoscp/c4ZI4DMO7ziw=' 'wasm-unsafe-eval' blob:; worker-src 'self' blob:; connect-src 'self' blob: data:; img-src 'self' blob: data:; media-src 'self' blob:; style-src 'self' 'unsafe-inline'; base-uri 'self'; form-action 'none'; frame-ancestors 'self'; upgrade-insecure-requests
+  Cache-Control: public, max-age=86400
+
+/llms.txt
+  Content-Type: text/plain; charset=utf-8

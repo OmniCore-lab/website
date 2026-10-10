@@ -1,0 +1,4 @@
+:root{color-scheme:light}
+html,body{margin:0;padding:0;height:100%;width:100%;background:transparent;overflow:hidden;-webkit-tap-highlight-color:transparent}
+#stage{position:fixed;inset:0}
+#stage canvas{display:block;width:100%;height:100%;touch-action:none}

@@ -1,0 +1,211 @@
+{
+  "lights": [
+    {
+      "name": "Fill_Front",
+      "type": "AREA",
+      "position": [
+        -0.5,
+        1.4,
+        4.2
+      ],
+      "direction": [
+        0.112225,
+        -0.31423,
+        -0.94269
+      ],
+      "target": [
+        -0.0511,
+        0.14308,
+        0.429238
+      ],
+      "color": [
+        0.24,
+        0.42,
+        1.0
+      ],
+      "energy_w": 140.0,
+      "size": [
+        5.5,
+        5.5
+      ],
+      "radiance": 1.47317,
+      "shape": "DISK",
+      "specular_factor": 0.0,
+      "diffuse_factor": 1.0,
+      "volume_factor": 1.0,
+      "visible_glossy": false,
+      "visible_transmission": false
+    },
+    {
+      "name": "Ground_Warm",
+      "type": "AREA",
+      "position": [
+        -1.8,
+        -1.25,
+        0.8
+      ],
+      "direction": [
+        0.867403,
+        0.243957,
+        -0.433701
+      ],
+      "target": [
+        1.669612,
+        -0.274171,
+        -0.934806
+      ],
+      "color": [
+        1.0,
+        0.18,
+        0.025
+      ],
+      "energy_w": 240.0,
+      "size": [
+        2.2,
+        2.2
+      ],
+      "radiance": 15.78396,
+      "shape": "DISK",
+      "specular_factor": 0.0,
+      "diffuse_factor": 1.0,
+      "volume_factor": 1.0,
+      "visible_glossy": false,
+      "visible_transmission": false
+    },
+    {
+      "name": "Key_Warm_UpperRight",
+      "type": "AREA",
+      "position": [
+        3.8,
+        4.4,
+        -0.8
+      ],
+      "direction": [
+        -0.647518,
+        -0.749758,
+        0.13632
+      ],
+      "target": [
+        1.209927,
+        1.400968,
+        -0.254722
+      ],
+      "color": [
+        1.0,
+        0.32,
+        0.08
+      ],
+      "energy_w": 820.0,
+      "size": [
+        4.2,
+        4.2
+      ],
+      "radiance": 14.79672,
+      "shape": "DISK",
+      "specular_factor": 0.0,
+      "diffuse_factor": 1.0,
+      "volume_factor": 1.0,
+      "visible_glossy": false,
+      "visible_transmission": false
+    },
+    {
+      "name": "Rim_Cold_BackTop",
+      "type": "AREA",
+      "position": [
+        0.8,
+        4.8,
+        -2.6
+      ],
+      "direction": [
+        -0.145,
+        -0.869999,
+        0.47125
+      ],
+      "target": [
+        0.22,
+        1.320003,
+        -0.715001
+      ],
+      "color": [
+        0.16,
+        0.38,
+        1.0
+      ],
+      "energy_w": 780.0,
+      "size": [
+        4.0,
+        4.0
+      ],
+      "radiance": 15.51761,
+      "shape": "DISK",
+      "specular_factor": 0.0,
+      "diffuse_factor": 1.0,
+      "volume_factor": 1.0,
+      "visible_glossy": false,
+      "visible_transmission": false
+    },
+    {
+      "name": "Rim_Cold_Left",
+      "type": "AREA",
+      "position": [
+        -4.0,
+        1.7,
+        -1.2
+      ],
+      "direction": [
+        0.887138,
+        -0.377034,
+        0.266141
+      ],
+      "target": [
+        -0.451447,
+        0.191866,
+        -0.135434
+      ],
+      "color": [
+        0.1,
+        0.28,
+        1.0
+      ],
+      "energy_w": 960.0,
+      "size": [
+        4.6,
+        4.6
+      ],
+      "radiance": 14.44128,
+      "shape": "DISK",
+      "specular_factor": 0.0,
+      "diffuse_factor": 1.0,
+      "volume_factor": 1.0,
+      "visible_glossy": false,
+      "visible_transmission": false
+    }
+  ],
+  "background": {
+    "color": [
+      0.0022,
+      0.0048,
+      0.012
+    ],
+    "strength": 0.12
+  },
+  "camera": {
+    "type": "ORTHO",
+    "position": [
+      0.1,
+      0.3,
+      7.8
+    ],
+    "target": [
+      -3.6e-05,
+      -0.020115,
+      -0.002796
+    ],
+    "ortho_scale": 3.3499999046325684
+  },
+  "view": {
+    "transform": "AgX",
+    "look": "AgX - Medium High Contrast",
+    "exposure": 0.05000000074505806
+  }
+}
