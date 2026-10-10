@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>進度｜OmniCore Lab</title>
+<meta name="description" content="OmniCore Lab 為 PalmCore 做了什麼，按日期列出；還沒做的也寫在這裡。">
+<link rel="canonical" href="https://omnicore-lab.dev/zh/progress">
+<link rel="alternate" hreflang="zh-Hant" href="https://omnicore-lab.dev/zh/progress">
+<link rel="alternate" hreflang="en" href="https://omnicore-lab.dev/progress">
+<link rel="alternate" hreflang="x-default" href="https://omnicore-lab.dev/progress">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="OmniCore Lab">
+<meta property="og:title" content="進度｜OmniCore Lab">
+<meta property="og:description" content="OmniCore Lab 為 PalmCore 做了什麼，按日期列出；還沒做的也寫在這裡。">
+<meta property="og:url" content="https://omnicore-lab.dev/zh/progress">
+<meta property="og:image" content="https://omnicore-lab.dev/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#E7EFEA">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&amp;family=Noto+Sans+TC:wght@400;500;700&amp;display=swap">
+<link rel="stylesheet" href="../assets/site.css?v=1010d">
+<link rel="stylesheet" href="../assets/app-theme.css?v=1010d">
+<script src="../assets/site.js?v=1010d" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">跳到主要內容</a>
+
+<!-- 頁首：每一頁都有同一段，改選單時要全部一起改 -->
+<header class="site-head">
+  <div class="wrap head">
+    <a class="brand" href="./" aria-label="OmniCore Lab 首頁"><svg viewBox="0 0 28 28" aria-hidden="true" focusable="false"><circle class="ring" cx="12" cy="13" r="8.25" fill="none" stroke-width="1.75"/><circle class="dot" cx="21.5" cy="20.5" r="3.5"/></svg><span>OmniCore Lab</span></a>
+    <nav class="nav" aria-label="主要選單">
+      <ul>
+        <li><a href="palmcore.html">PalmCore</a></li>
+        <li><a href="about.html">關於</a></li>
+        <li><a href="progress.html" aria-current="page">進度</a></li>
+        <li><a href="contact.html">聯絡</a></li>
+        <li><a class="gh" href="https://github.com/OmniCore-lab" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg><span>GitHub</span></a></li>
+      </ul>
+    </nav>
+    <a class="lang" href="../progress.html" lang="en" hreflang="en" aria-label="Switch to English">English</a>
+  </div>
+</header>
+
+<main id="main">
+  <section class="page-head">
+    <div class="wrap">
+      <p class="label">進度</p>
+      <h1>我們做了什麼，按日期</h1>
+      <p class="lead">從我們自己的版本紀錄整理出來。寫得短、有日期，沒做完的也列出來。</p>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="h-log">
+    <div class="wrap split">
+      <p class="label">紀錄</p>
+      <div data-reveal>
+        <h2 id="h-log" class="gap-l">從能用的這一版開始</h2>
+        <ol class="log">
+          <li><time>2026/10/10</time><div><h3>遮罩模型用真畫面重新訓練</h3><p>把手機上遮個人資料的模型重新訓練，這次訓練資料裡有真的手機畫面，也有成對的反例。在沒看過的真畫面上，個資抓到的比例從 92.8% 到 99.3%，誤遮少了一半以上。這個網站和 GitHub 組織也在同一天公開。</p></div></li>
+          <li><time>2026/10/09</time><div><h3>第一次完整的靜態檢查</h3><p>整個 App 第一次全部跑過靜態檢查，找到並修掉 28 個錯誤。搜尋與資料夾畫面的檔案、資料庫讀寫移出主執行緒。</p></div></li>
+          <li><time>2026/10/06</time><div><h3>遮罩會看上下文</h3><p>診所的電話、訂單編號、日期不是個人資料。加上會看前後文字的規則，再決定遮不遮。</p></div></li>
+          <li><time>2026/10/05</time><div><h3>角色多了 19 個動作</h3><p>3D 角色的環和頭可以轉整圈了。現在一共有 30 個小動作；跑不動 3D 的手機有平面版。</p></div></li>
+          <li><time>2026/10/04</time><div><h3>傳東西給家人、在背景幫忙留意</h3><p>可以從任何 App 把文字、照片、檔案傳給家人。PalmCore 能在背景留意某一則通知，來了就照當初說的處理。對話裡可以放地圖卡。</p></div></li>
+          <li><time>2026/10/03</time><div><h3>家人端 App</h3><p>給家人用的第二個 App。掃 QR code 或邀請連結配對，訊息端對端加密；即時看畫面要本人在自己手機上按同意才開始。</p></div></li>
+          <li><time>2026/10/01</time><div><h3>介面以角色為中心重做</h3><p>角色變成首頁，對話在牠下方的霧玻璃面板裡。語音辨識與語音輸出都可以選在手機上跑或用雲端。</p></div></li>
+          <li><time>2026/09/30</time><div><h3>可以替你操作手機</h3><p>PalmCore 讀畫面、一步一步把事情做完，按哪裡都會說出來。收不回來的事要先得到同意。</p></div></li>
+          <li><time>2026/09/28</time><div><h3>隱私留在手機上</h3><p>文字與照片（例如藥袋）的個資遮罩在手機上完成。背景守護會留意可疑的訊息。</p></div></li>
+          <li><time>2026/09/23</time><div><h3>開始做能用的這一版</h3><p>更早的原型只是把想法做出來看。這一版是要真的能在手機上用的，從這一天起進版本控制。</p></div></li>
+        </ol>
+        <p class="fine">部分原始碼公開在 <a href="https://github.com/OmniCore-lab" rel="noopener">github.com/OmniCore-lab</a>。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="h-notyet">
+    <div class="wrap split">
+      <p class="label">還沒做</p>
+      <div data-reveal>
+        <h2 id="h-notyet" class="gap-m">還沒做到的事</h2>
+        <ul class="plain">
+          <li><strong>新的遮罩模型在手機上重跑</strong><span>上面的數字是把手機的模型和規則拿到電腦上跑出來的，接下來要在手機上再跑一次。</span></li>
+          <li><strong>iPhone 的家人端</strong><span>寫好了，還沒編譯、也沒在實機上測過。</span></li>
+          <li><strong>外部驗證</strong><span>我們量的數字，還沒有團隊以外的人檢查過。</span></li>
+          <li><strong>公開上架</strong><span>還沒有日期。</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- 頁尾：每一頁都有同一段 -->
+<footer class="site-foot">
+  <div class="wrap foot">
+    <div>
+      <a class="brand" href="./"><svg viewBox="0 0 28 28" aria-hidden="true" focusable="false"><circle class="ring" cx="12" cy="13" r="8.25" fill="none" stroke-width="1.75"/><circle class="dot" cx="21.5" cy="20.5" r="3.5"/></svg><span>OmniCore Lab</span></a>
+      <p>台灣的小型研發團隊，目前主要研發 PalmCore。</p>
+      <p><a href="mailto:contact@omnicore-lab.dev">contact@omnicore-lab.dev</a></p>
+      <p><a href="tel:+886971809510">0971 809 510</a></p>
+    </div>
+    <nav aria-label="頁尾連結">
+      <ul>
+        <li><a href="palmcore.html">PalmCore</a></li>
+        <li><a href="about.html">關於</a></li>
+        <li><a href="progress.html" aria-current="page">進度</a></li>
+        <li><a href="contact.html">聯絡</a></li>
+        <li><a href="privacy.html">隱私權政策</a></li>
+        <li><a href="https://github.com/OmniCore-lab" rel="noopener">GitHub</a></li>
+        <li><a href="../progress.html" lang="en" hreflang="en">English</a></li>
+      </ul>
+    </nav>
+    <p class="copy">© 2026 OmniCore Lab</p>
+  </div>
+</footer>
+</body>
+</html>

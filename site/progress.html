@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Progress | OmniCore Lab</title>
+<meta name="description" content="A dated log of what OmniCore Lab has built for PalmCore, and what is not done yet.">
+<link rel="canonical" href="https://omnicore-lab.dev/progress">
+<link rel="alternate" hreflang="zh-Hant" href="https://omnicore-lab.dev/zh/progress">
+<link rel="alternate" hreflang="en" href="https://omnicore-lab.dev/progress">
+<link rel="alternate" hreflang="x-default" href="https://omnicore-lab.dev/progress">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="OmniCore Lab">
+<meta property="og:title" content="Progress | OmniCore Lab">
+<meta property="og:description" content="A dated log of what OmniCore Lab has built for PalmCore, and what is not done yet.">
+<meta property="og:url" content="https://omnicore-lab.dev/progress">
+<meta property="og:image" content="https://omnicore-lab.dev/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="zh_TW">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#E7EFEA">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&amp;family=Noto+Sans+TC:wght@400;500;700&amp;display=swap">
+<link rel="stylesheet" href="assets/site.css?v=1010d">
+<link rel="stylesheet" href="assets/app-theme.css?v=1010d">
+<script src="assets/site.js?v=1010d" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+
+<!-- 頁首：每一頁都有同一段，改選單時要全部一起改 -->
+<header class="site-head">
+  <div class="wrap head">
+    <a class="brand" href="./" aria-label="OmniCore Lab home"><svg viewBox="0 0 28 28" aria-hidden="true" focusable="false"><circle class="ring" cx="12" cy="13" r="8.25" fill="none" stroke-width="1.75"/><circle class="dot" cx="21.5" cy="20.5" r="3.5"/></svg><span>OmniCore Lab</span></a>
+    <nav class="nav" aria-label="Main">
+      <ul>
+        <li><a href="palmcore.html">PalmCore</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="progress.html" aria-current="page">Progress</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a class="gh" href="https://github.com/OmniCore-lab" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg><span>GitHub</span></a></li>
+      </ul>
+    </nav>
+    <a class="lang" href="zh/progress.html" lang="zh-Hant" hreflang="zh-Hant" aria-label="切換到中文">中文</a>
+  </div>
+</header>
+
+<main id="main">
+  <section class="page-head">
+    <div class="wrap">
+      <p class="label">Progress</p>
+      <h1>What we have built, by date</h1>
+      <p class="lead">Taken from our own commit history. Short, dated, and including what is not done.</p>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="h-log">
+    <div class="wrap split">
+      <p class="label">Log</p>
+      <div data-reveal>
+        <h2 id="h-log" class="gap-l">Since the working build began</h2>
+        <ol class="log">
+          <li><time>10 Oct 2026</time><div><h3>Masking model retrained on real screens</h3><p>Retrained the on-device model that masks personal information, this time with real phone screens and paired counter-examples in the training data. On held-out real screens it now catches 99.3% of personal details, up from 92.8%, with fewer than half the false masks. This website and our GitHub organization went public the same day.</p></div></li>
+          <li><time>9 Oct 2026</time><div><h3>First full lint pass</h3><p>Ran the static checks over the whole app for the first time. 28 errors found and fixed. Moved file and database work off the main thread in search and the folder view.</p></div></li>
+          <li><time>6 Oct 2026</time><div><h3>Masking that reads context</h3><p>A clinic's phone number, an order number or a date is not personal information. Added rules that look at the surrounding words before masking.</p></div></li>
+          <li><time>5 Oct 2026</time><div><h3>The character learns 19 new moves</h3><p>The 3D character can now turn its ring and head a full circle. It has 30 short animations in all, and a flat version for phones that can't run 3D.</p></div></li>
+          <li><time>4 Oct 2026</time><div><h3>Sharing with family, and watching for things</h3><p>The person can share text, photos and files to family from any app. PalmCore can watch for a notification in the background and act on it when it arrives. Map cards in conversation.</p></div></li>
+          <li><time>3 Oct 2026</time><div><h3>Family app</h3><p>A second app for family members. Pairing by QR code or invite link, messages encrypted end to end, live screen sharing that starts only after the person agrees on their own phone.</p></div></li>
+          <li><time>1 Oct 2026</time><div><h3>Interface rebuilt around the character</h3><p>The character became the home screen, with the conversation in a glass panel beneath it. Speech recognition and speech output can each run on the phone or in the cloud.</p></div></li>
+          <li><time>30 Sep 2026</time><div><h3>It can operate the phone for you</h3><p>PalmCore reads the screen and carries out a task one step at a time, saying what it is pressing. Anything that can't be undone needs a yes first.</p></div></li>
+          <li><time>28 Sep 2026</time><div><h3>Privacy on the phone</h3><p>On-device masking for text and for photos such as medicine bags. A background guard that notices suspicious messages.</p></div></li>
+          <li><time>23 Sep 2026</time><div><h3>The working build begins</h3><p>An earlier prototype showed the idea. This is the build meant to really work on a phone, under version control from this day.</p></div></li>
+        </ol>
+        <p class="fine">Part of the source is public at <a href="https://github.com/OmniCore-lab" rel="noopener">github.com/OmniCore-lab</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="h-notyet">
+    <div class="wrap split">
+      <p class="label">Not done</p>
+      <div data-reveal>
+        <h2 id="h-notyet" class="gap-m">What we have not done yet</h2>
+        <ul class="plain">
+          <li><strong>On-device check of the new masking model</strong><span>The numbers above come from running the phone's model and rules on a computer. A run on the phone itself is next.</span></li>
+          <li><strong>Family app on iPhone</strong><span>Written, not yet compiled or tested on a device.</span></li>
+          <li><strong>Outside verification</strong><span>Nobody outside the team has checked our measurements.</span></li>
+          <li><strong>Public release</strong><span>No date yet.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- 頁尾：每一頁都有同一段 -->
+<footer class="site-foot">
+  <div class="wrap foot">
+    <div>
+      <a class="brand" href="./"><svg viewBox="0 0 28 28" aria-hidden="true" focusable="false"><circle class="ring" cx="12" cy="13" r="8.25" fill="none" stroke-width="1.75"/><circle class="dot" cx="21.5" cy="20.5" r="3.5"/></svg><span>OmniCore Lab</span></a>
+      <p>A small R&amp;D team in Taiwan, currently building PalmCore.</p>
+      <p><a href="mailto:contact@omnicore-lab.dev">contact@omnicore-lab.dev</a></p>
+      <p><a href="tel:+886971809510">+886 971 809 510</a></p>
+    </div>
+    <nav aria-label="Footer">
+      <ul>
+        <li><a href="palmcore.html">PalmCore</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="progress.html" aria-current="page">Progress</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="https://github.com/OmniCore-lab" rel="noopener">GitHub</a></li>
+        <li><a href="zh/progress.html" lang="zh-Hant" hreflang="zh-Hant">中文</a></li>
+      </ul>
+    </nav>
+    <p class="copy">© 2026 OmniCore Lab</p>
+  </div>
+</footer>
+</body>
+</html>

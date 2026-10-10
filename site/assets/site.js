@@ -32,6 +32,12 @@
   var stage = document.querySelector('.orb-stage[data-orb]');
   if (!stage) return;
   var frame = null, live = false;
+  /* 動作鈕：3D 準備好才顯示，按了叫牠做一個動作 */
+  var moves = document.querySelector('.moves');
+  if (moves) moves.addEventListener('click', function (e) {
+    var b = e.target.closest('button[data-move]');
+    if (b && live) post({ react: b.getAttribute('data-move') });
+  });
   function post(msg) { if (frame && frame.contentWindow) frame.contentWindow.postMessage(msg, location.origin); }
   function mount() {
     frame = document.createElement('iframe');
@@ -43,7 +49,7 @@
   }
   window.addEventListener('message', function (e) {
     if (e.origin !== location.origin || !e.data || !e.data.zhihe) return;
-    if (e.data.zhihe === 'ready') { live = true; stage.classList.add('is-live'); }
+    if (e.data.zhihe === 'ready') { live = true; stage.classList.add('is-live'); if (moves) moves.hidden = false; }
     if (e.data.zhihe === 'failed' || e.data.zhihe === 'contextlost') { live = false; stage.classList.remove('is-live'); }
   });
   /* 牠看著游標 */

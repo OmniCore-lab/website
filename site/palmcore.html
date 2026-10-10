@@ -26,9 +26,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&amp;family=Noto+Sans+TC:wght@400;500;700&amp;display=swap">
-<link rel="stylesheet" href="assets/site.css?v=1010c">
-<link rel="stylesheet" href="assets/app-theme.css?v=1010c">
-<script src="assets/site.js" defer></script>
+<link rel="stylesheet" href="assets/site.css?v=1010d">
+<link rel="stylesheet" href="assets/app-theme.css?v=1010d">
+<script src="assets/site.js?v=1010d" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to main content</a>
@@ -41,6 +41,7 @@
       <ul>
         <li><a href="palmcore.html" aria-current="page">PalmCore</a></li>
         <li><a href="about.html">About</a></li>
+        <li><a href="progress.html">Progress</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li><a class="gh" href="https://github.com/OmniCore-lab" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg><span>GitHub</span></a></li>
       </ul>
@@ -55,6 +56,48 @@
       <p class="label">Product · In development</p>
       <h1>PalmCore</h1>
       <p class="lead">An AI companion that lives in the phone, made for people who aren&rsquo;t at home with smartphones.</p>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="h-today">
+    <div class="wrap split">
+      <p class="label">What exists today</p>
+      <div data-reveal>
+        <h2 id="h-today" class="gap-m">It runs on a phone today</h2>
+        <p class="gap-l">These are screens from the current build, running on an Android phone. Nothing here is a mock-up.</p>
+        <div class="phones">
+          <figure class="phone"><img src="assets/shots/home.webp" width="540" height="1200" loading="lazy" decoding="async" alt="PalmCore home screen with the character in the centre and a reminder suggestion below"><figcaption>Home. The character is the home screen. You talk to it or type.</figcaption></figure>
+          <figure class="phone"><img src="assets/shots/steps.webp" width="540" height="1200" loading="lazy" decoding="async" alt="A conversation showing walking directions broken into numbered steps"><figcaption>Directions come as numbered steps, one thing at a time.</figcaption></figure>
+          <figure class="phone"><img src="assets/shots/doing.webp" width="540" height="1200" loading="lazy" decoding="async" alt="PalmCore operating the clock app, with a caption for the current step, a magnifier on the button being pressed, and a stop button"><figcaption>When it does something for you, it says each step and shows where it is pressing. The stop button never leaves the screen.</figcaption></figure>
+          <figure class="phone"><img src="assets/shots/confirm.webp" width="540" height="1200" loading="lazy" decoding="async" alt="A confirmation card asking before deleting an alarm, with the options let it press delete or I'll do it myself"><figcaption>Before anything that can't be undone, it stops and asks. &ldquo;I'll do it myself&rdquo; is always an answer.</figcaption></figure>
+        </div>
+        <h3 class="built-h">What is built</h3>
+        <ul class="built">
+          <li>A companion you talk to or type to, with voice in and out</li>
+          <li>Step-by-step guidance on top of whatever app you are in</li>
+          <li>Doing a task for you on the phone, one visible step at a time, with a confirmation before anything irreversible</li>
+          <li>A separate app for family: pairing by QR code, end-to-end encrypted messages, and screen sharing that starts only when the person agrees</li>
+          <li>Memory of what you have told it, kept on the phone</li>
+          <li>Masking of personal information on the phone before text goes to a cloud model</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="h-measured">
+    <div class="wrap split">
+      <p class="label">Measured so far</p>
+      <div class="prose" data-reveal>
+        <h2 id="h-measured">One thing we have measured properly</h2>
+        <p>Before text leaves the phone for a cloud model, a small model on the phone finds personal information and masks it. We test it on material it never saw during training.</p>
+        <dl class="stats">
+          <div><dt>99.3%</dt><dd><strong>of personal details caught</strong><span>152 of 153 items across 110 screens captured from real phones</span></dd></div>
+          <div><dt>0.06</dt><dd><strong>false masks per clean screen</strong><span>on screens that contain no personal information at all</span></dd></div>
+          <div><dt>98.5%</dt><dd><strong>caught in conversation</strong><span>480 test sentences, nine kinds of personal information</span></dd></div>
+        </dl>
+        <p class="fine">Measured on 10 October 2026 with the same quantized model and rules that ship in the app. These are our own test sets and nobody outside the team has checked them. A fresh on-device run with this model is still to do.</p>
+        <p class="fine">How the phone-number rules work is public: <a href="https://github.com/OmniCore-lab/tw-phone" rel="noopener">tw-phone on GitHub</a></p>
+      </div>
     </div>
   </section>
 
@@ -113,7 +156,7 @@
         <h2 id="h-privacy">Personal data stays on the phone first</h2>
         <p>A companion that helps you use your phone will come across very private things. Our position: personal data is handled on the phone first, and leaves it only when it has to.</p>
         <p>This is where the design starts. It is not a setting added at the end. It makes a number of features harder to build, and we think that cost belongs to us, not to the people using the product.</p>
-        <p>When PalmCore is released it will come with its own privacy policy, spelling out how data is actually handled. Until then we won&rsquo;t make more detailed promises here.</p>
+        <p>When PalmCore is released it will come with its own privacy policy, spelling out what is collected, where it is kept and for how long.</p>
         <p><a class="more" href="privacy.html">Privacy policy for this website</a></p>
       </div>
     </div>
@@ -159,6 +202,7 @@
       <ul>
         <li><a href="palmcore.html" aria-current="page">PalmCore</a></li>
         <li><a href="about.html">About</a></li>
+        <li><a href="progress.html">Progress</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li><a href="privacy.html">Privacy</a></li>
         <li><a href="https://github.com/OmniCore-lab" rel="noopener">GitHub</a></li>

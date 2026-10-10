@@ -226,3 +226,48 @@ address { font-style: normal; }
 .nav a.gh { padding: .42rem .95rem; font-size: .875rem; background-image: none; opacity: 1; color: #F7F3EA; }
 .actions { gap: .75rem 1rem; }
 .actions .more { margin-left: .5rem; }
+
+/* ── 開放一輪（2026-10-10）：實際畫面、數字、進度紀錄、智核動作 ── */
+.phones { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem 1.25rem; margin-block: 1.5rem 2.25rem; }
+@media (min-width: 900px) { .phones { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.phone { margin: 0; }
+.phone img {
+  display: block; width: 100%; height: auto; border-radius: 22px;
+  box-shadow: 0 0 0 5px #1B2733, 0 0 0 6px rgba(255, 255, 255, .5), 0 26px 50px -24px rgba(37, 60, 66, .55);
+}
+.phone figcaption { margin-top: 1rem; font-size: .875rem; line-height: 1.55; color: var(--muted); }
+.built-h { font-size: 1.0625rem; margin: 0 0 .75rem; }
+.built { margin: 0; padding: 0; list-style: none; display: grid; gap: .6rem 2rem; }
+@media (min-width: 760px) { .built { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.built li { position: relative; padding-left: 1.25rem; color: var(--text); }
+.built li::before { content: ""; position: absolute; left: 0; top: .62em; width: .42rem; height: .42rem; border-radius: 50%; background: var(--gold); }
+.section .split > div:not(.prose) > p { max-width: 40em; }
+
+.stats { display: grid; gap: 1rem; margin: 1.5rem 0; }
+@media (min-width: 700px) { .stats { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.stats > div { background: rgba(255, 255, 255, .55); border-radius: 20px; padding: 1.1rem 1.2rem 1.2rem; box-shadow: inset 0 1px 0 var(--edge-hi); }
+.stats dt { font-size: clamp(1.9rem, 1.4rem + 1.6vw, 2.5rem); font-weight: 600; line-height: 1.1; color: #1D4279; letter-spacing: -.02em; }
+.stats dd { margin: .5rem 0 0; }
+.stats dd strong { display: block; font-weight: 600; }
+.stats dd span { display: block; margin-top: .25rem; font-size: .875rem; color: var(--muted); line-height: 1.5; }
+.fine { font-size: .875rem; color: var(--muted); line-height: 1.6; }
+
+.log { list-style: none; margin: 0 0 1.5rem; padding: 0; }
+.log > li { display: grid; gap: .35rem 2rem; padding-block: 1.35rem; border-top: 1px solid var(--line); }
+.log > li:last-child { border-bottom: 1px solid var(--line); }
+@media (min-width: 700px) { .log > li { grid-template-columns: 8.5rem minmax(0, 1fr); } }
+.log time { color: var(--sand); font-weight: 600; font-size: .9375rem; font-variant-numeric: tabular-nums; padding-top: .15rem; }
+.log h3 { margin: 0 0 .35rem; font-size: 1.125rem; }
+.log p { margin: 0; color: var(--muted); max-width: 40em; }
+
+/* 智核下面的動作鈕：3D 準備好才出現 */
+.moves { display: flex; flex-wrap: wrap; justify-content: center; gap: .5rem; margin-top: 1rem; }
+.moves[hidden] { display: none; }
+.moves button {
+  font: inherit; font-size: .875rem; color: var(--text); cursor: pointer;
+  background: var(--glass-strong); border: 0; border-radius: 999px; padding: .42rem .95rem;
+  box-shadow: inset 0 1px 0 var(--edge-hi), 0 8px 22px -14px rgba(37, 60, 66, .5);
+  transition: transform .15s ease;
+}
+.moves button:hover { transform: translateY(-1px); }
+.moves button:active { transform: scale(.96); }

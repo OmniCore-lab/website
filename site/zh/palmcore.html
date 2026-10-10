@@ -26,9 +26,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&amp;family=Noto+Sans+TC:wght@400;500;700&amp;display=swap">
-<link rel="stylesheet" href="../assets/site.css?v=1010c">
-<link rel="stylesheet" href="../assets/app-theme.css?v=1010c">
-<script src="../assets/site.js" defer></script>
+<link rel="stylesheet" href="../assets/site.css?v=1010d">
+<link rel="stylesheet" href="../assets/app-theme.css?v=1010d">
+<script src="../assets/site.js?v=1010d" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">跳到主要內容</a>
@@ -41,6 +41,7 @@
       <ul>
         <li><a href="palmcore.html" aria-current="page">PalmCore</a></li>
         <li><a href="about.html">關於</a></li>
+        <li><a href="progress.html">進度</a></li>
         <li><a href="contact.html">聯絡</a></li>
         <li><a class="gh" href="https://github.com/OmniCore-lab" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg><span>GitHub</span></a></li>
       </ul>
@@ -55,6 +56,48 @@
       <p class="label">產品　研發中</p>
       <h1>PalmCore</h1>
       <p class="lead">住在手機裡的 AI 夥伴，為不熟悉智慧型手機的人而做。</p>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="h-today">
+    <div class="wrap split">
+      <p class="label">現在有什麼</p>
+      <div data-reveal>
+        <h2 id="h-today" class="gap-m">它現在就在手機上跑</h2>
+        <p class="gap-l">下面是目前這一版在 Android 手機上的實際畫面，不是示意圖。</p>
+        <div class="phones">
+          <figure class="phone"><img src="../assets/shots/home.webp" width="540" height="1200" loading="lazy" decoding="async" alt="PalmCore 首頁：角色在畫面中央，下方是一則提醒建議"><figcaption>首頁。角色本身就是首頁，用說的或打字都可以。</figcaption></figure>
+          <figure class="phone"><img src="../assets/shots/steps.webp" width="540" height="1200" loading="lazy" decoding="async" alt="對話裡把走路路線拆成編號步驟"><figcaption>路線拆成一步一步，一次只講一件事。</figcaption></figure>
+          <figure class="phone"><img src="../assets/shots/doing.webp" width="540" height="1200" loading="lazy" decoding="async" alt="PalmCore 正在操作時鐘 App：上方是目前這一步的字幕，放大圈標出正在按的按鈕，下方是停止鈕"><figcaption>它替你做的時候，每一步都說出來，也讓你看到它按在哪裡。「停止」一直都在畫面上。</figcaption></figure>
+          <figure class="phone"><img src="../assets/shots/confirm.webp" width="540" height="1200" loading="lazy" decoding="async" alt="刪除鬧鐘前的確認卡，選項是「讓它按刪除」或「我自己來」"><figcaption>收不回來的事，它會先停下來問。「我自己來」永遠是一個選項。</figcaption></figure>
+        </div>
+        <h3 class="built-h">已經做出來的</h3>
+        <ul class="built">
+          <li>可以用說的、也可以打字的夥伴，能聽也能念</li>
+          <li>不管你在哪個 App 裡，都能一步一步帶著你做</li>
+          <li>在手機上替你把事情做完：每一步都看得到，收不回來的事會先問</li>
+          <li>給家人用的另一個 App：掃 QR code 配對、訊息端對端加密、畫面分享要本人按同意才開始</li>
+          <li>記得你說過的事，存在手機上</li>
+          <li>文字送到雲端模型之前，先在手機上把個人資料遮起來</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="h-measured">
+    <div class="wrap split">
+      <p class="label">目前量過的</p>
+      <div class="prose" data-reveal>
+        <h2 id="h-measured">一件我們認真量過的事</h2>
+        <p>文字離開手機、送到雲端模型之前，手機上有一個小模型先找出個人資料並遮起來。我們用它在訓練時沒看過的資料來測。</p>
+        <dl class="stats">
+          <div><dt>99.3%</dt><dd><strong>的個人資料有抓到</strong><span>110 張真手機畫面、153 處個資裡抓到 152 處</span></dd></div>
+          <div><dt>0.06</dt><dd><strong>每張乾淨畫面平均誤遮</strong><span>完全沒有個人資料的畫面上</span></dd></div>
+          <div><dt>98.5%</dt><dd><strong>對話裡有抓到</strong><span>480 句測試句、九類個人資料</span></dd></div>
+        </dl>
+        <p class="fine">2026 年 10 月 10 日量的，用的是跟 App 裡同一份量化模型與規則。這是我們自己的測試集，沒有團隊以外的人驗證過；這一版模型在手機上重跑一次還沒做。</p>
+        <p class="fine">電話號碼那部分的規則是公開的：<a href="https://github.com/OmniCore-lab/tw-phone" rel="noopener">GitHub 上的 tw-phone</a></p>
+      </div>
     </div>
   </section>
 
@@ -113,7 +156,7 @@
         <h2 id="h-privacy">個人資料先留在手機上</h2>
         <p>一個陪你用手機的夥伴，一定會碰到很私人的東西。我們的立場是：個人資料先在手機上處理，能不離開手機就不離開。</p>
         <p>這是設計的起點，不是做完之後才補上的設定。它讓不少功能變得比較難做。我們認為這個代價該由我們來付，不該轉給使用者。</p>
-        <p>PalmCore 上架的時候，會有一份產品自己的隱私權政策，把資料實際怎麼處理寫清楚。在那之前，我們不在這裡做更細的承諾。</p>
+        <p>PalmCore 上架時，會有一份產品自己的隱私權政策，具體說明收集哪些資料、存在哪裡、保留多久。</p>
         <p><a class="more" href="privacy.html">這個網站的隱私權政策</a></p>
       </div>
     </div>
@@ -159,6 +202,7 @@
       <ul>
         <li><a href="palmcore.html" aria-current="page">PalmCore</a></li>
         <li><a href="about.html">關於</a></li>
+        <li><a href="progress.html">進度</a></li>
         <li><a href="contact.html">聯絡</a></li>
         <li><a href="privacy.html">隱私權政策</a></li>
         <li><a href="https://github.com/OmniCore-lab" rel="noopener">GitHub</a></li>

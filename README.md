@@ -16,8 +16,8 @@ Then open http://localhost:8790/.
 
 ```
 site/
-├─ index.html, palmcore.html, about.html, contact.html, privacy.html, 404.html
-├─ zh/              the same six pages in Traditional Chinese
+├─ index.html, palmcore.html, progress.html, about.html, contact.html, privacy.html, 404.html
+├─ zh/              the same pages in Traditional Chinese
 ├─ assets/          site.css (layout), app-theme.css (colour and glass), site.js
 ├─ orb/             the 3D PalmCore character, loaded into a same-origin iframe
 ├─ _headers         security headers for Cloudflare Pages
